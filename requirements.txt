@@ -1,0 +1,13 @@
+
+# This file lists the Python packages required for the project.
+apache-airflow
+apache-airflow-providers-postgres
+apache-airflow-providers-mongo
+apache-airflow-providers-redis
+apache-airflow-providers-docker
+
+beautifulsoup4
+numpy
+pandas
+requests
+scikit-learn

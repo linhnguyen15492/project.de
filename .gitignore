@@ -185,3 +185,11 @@ fabric.properties
 
 # idea folder, uncomment if you don't need it
 .idea
+
+# ignore airflow files
+airflow.cfg
+airflow.db
+airflow.db-shm
+airflow.db-wal
+simple_auth_manager_passwords.json.generated
+airflow/logs
