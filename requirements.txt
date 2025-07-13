@@ -5,9 +5,12 @@ apache-airflow-providers-postgres
 apache-airflow-providers-mongo
 apache-airflow-providers-redis
 apache-airflow-providers-docker
+apache-airflow-providers-http
 
 beautifulsoup4
 numpy
 pandas
 requests
 scikit-learn
+pymongo
+psycopg2

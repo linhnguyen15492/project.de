@@ -15,7 +15,8 @@ def logging():
     @task
     def log_to_mongo():
         try:
-            mongo_hook = MongoHook(mongo_conn_id="de_mongo_conn")
+            # sử dụng mongo db atlas on cloud để ghi log
+            mongo_hook = MongoHook(mongo_conn_id="mongoid")
             conn = mongo_hook.get_conn()
             collection = conn.get_database("airflow").get_collection("logs")
             if collection is None:

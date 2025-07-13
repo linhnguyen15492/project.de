@@ -37,7 +37,7 @@ def tutorial_taskflow_api():
         return order_data_dict
 
     @task(multiple_outputs=True)
-    def transform(order_data_dict: dict):
+    def transform(order_data_dict) -> dict:
         """
         #### Transform task
         A simple Transform task which takes in the collection of order data and
@@ -51,7 +51,7 @@ def tutorial_taskflow_api():
         return {"total_order_value": total_order_value}
 
     @task()
-    def load(total_order_value: float):
+    def load(total_order_value):
         """
         #### Load task
         A simple Load task which takes in the result of the Transform task and
@@ -62,14 +62,14 @@ def tutorial_taskflow_api():
 
     order_data = extract()
     order_summary = transform(order_data)
-    load(order_summary["total_order_value"])
+    load(order_summary["total_order_value"])  # type: ignore
 
     logging("TaskFlow API completed successfully")
 
 
 def logging(state: str) -> None:
     try:
-        mongo_hook = MongoHook(mongo_conn_id="de_mongo_conn")
+        mongo_hook = MongoHook(mongo_conn_id="mongoid")
         conn = mongo_hook.get_conn()
         collection = conn.get_database("airflow").get_collection("logs")
         if collection is None:
