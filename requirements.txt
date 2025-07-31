@@ -1,5 +1,6 @@
 
 # This file lists the Python packages required for the project.
+"apache-airflow[celery]==3.0.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.3/constraints-3.9.txt"
 apache-airflow
 apache-airflow-providers-postgres
 apache-airflow-providers-mongo
@@ -7,10 +8,11 @@ apache-airflow-providers-redis
 apache-airflow-providers-docker
 apache-airflow-providers-http
 
+pendulum
 beautifulsoup4
 numpy
 pandas
 requests
 scikit-learn
 pymongo
-psycopg2
+psycopg2-binary

@@ -5,7 +5,8 @@ import urllib.parse
 
 username = "linhnnh"
 password = "123456"
-host = "localhost"  # Or your MongoDB server's IP address/hostname
+# host = "localhost"  # Or your MongoDB server's IP address/hostname
+host = "192.168.9.71"  # sử dụng khi kết nối từ wsl2
 port = 27017  # Default MongoDB port
 database_name = (
     "airflow"  # Database to authenticate against (optional, defaults to 'admin')
