@@ -186,6 +186,9 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 .idea
 
+# Ignore data folder
+.data
+
 # ignore airflow files
 airflow.cfg
 airflow.db
