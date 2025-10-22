@@ -1,0 +1,14 @@
+de-c2w1a1-rds.c7gm2ks2y6mv.us-east-1.rds.amazonaws.com
+
+
+psql --host=de-c2w1a1-rds.c7gm2ks2y6mv.us-east-1.rds.amazonaws.com --username=postgres --password --port=5432
+
+
+de-c2w1a1-279089808338-us-east-1-data
+
+10.0.1.16
+
+
+
+psql --host=de-c2w1a1-rds.c7gm2ks2y6mv.us-east-1.rds.amazonaws.com --username=postgres --password --port=5432
+adminpwrd
