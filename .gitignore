@@ -199,4 +199,6 @@ airflow/logs
 testing/logs
 
 
-env
+.env
+.credentials
+.secrets
