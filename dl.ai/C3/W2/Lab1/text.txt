@@ -1,0 +1,20 @@
+cat ../.aws/aws_console_url
+
+
+glue_role = "de-c3w2lab1-glue-role"
+metadata_glue_job = "de-c3w2lab1-metadata-etl-job"
+reviews_glue_job = "de-c3w2lab1-reviews-etl-job"
+
+
+aws glue start-job-run --job-name <GLUE-JOB-NAME> | jq -r '.JobRunId' 
+
+aws glue get-job-run --job-name <GLUE-JOB-NAME> --run-id <JOB-RUN-ID> --output text --query "JobRun.JobRunState"
+
+
+aws glue start-job-run --job-name de-c3w2lab1-metadata-etl-job | jq -r '.JobRunId'
+jr_5712ad9463fe6ad2819a1ff82e27f796af03ed3b0d98869f2e97040a7603948f
+aws glue get-job-run --job-name de-c3w2lab1-metadata-etl-job --run-id jr_5712ad9463fe6ad2819a1ff82e27f796af03ed3b0d98869f2e97040a7603948f --output text --query "JobRun.JobRunState"
+
+
+
+aws glue start-job-run --job-name de-c3w2lab1-reviews-etl-job | jq -r '.JobRunId' 
